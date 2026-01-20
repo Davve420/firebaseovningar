@@ -18,11 +18,13 @@ const renderProducts = data => {
         productHeader.innerText = data[key].name;
         productDescription.innerText = data[key].description;
         productPrice.innerText = 'price: '+ data[key].price;
-        productCard.appendChild(productDescription);
-        productCard.appendChild(productInventory);
-        productCard.appendChild(productPrice);
-        productCard.appendChild(productImage);
-        productCard.appendChild(productHeader);
+        productCard.append(
+            productHeader,
+            productImage,
+            productDescription,
+            productInventory,
+            productPrice
+        )
         container.appendChild(productCard);
         if(data[key].inventory > 0){
             const buyForm = document.createElement('form');

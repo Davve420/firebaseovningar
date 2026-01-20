@@ -1,0 +1,10 @@
+.task{
+    display: flex;
+}
+
+.hidden{
+    display: none;
+}
+.task p.done{
+    text-decoration: line-through;
+}
